@@ -1,91 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <title>vanjazeli/gulp-vanilla-starter</title>
-</head>
-<body>
-    <header class="header">
-        <div class="header__holder">
-            <div class="wrap">
-                <a class="header__logo" href="index.html">
-                    <img class="header__logo-image" src="./assets/images/logo.svg" alt="logo">
-                </a>
-                <button class="header__button header__button--open js-header-open" type="button">
-                    <div class="header__button-content">
-                        <span class="header__button-line header__button-line--top"></span>
-                        <span class="header__button-line header__button-line--middle"></span>
-                        <span class="header__button-line header__button-line--bottom"></span>
-                    </div>
-                    <span class="hidden">This button opens the menu.</span>
-                </button>
-                <div class="header__menu js-header-menu">
-                    <div class="header__menu-top">
-                        <div class="header__languages">
-                            <a class="header__language-link hover-default header__language-link--active" href="javascript:;">Srpski</a>
-                            <a class="header__language-link hover-default" href="javascript:;">English</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/styles.css">
+        <title>vanjazeli/gulp-vanilla-starter</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__holder">
+                <div class="wrap">
+                    <a class="header__logo" href="index.html">
+                        <img class="header__logo-image" src="./assets/images/logo.svg" alt="logo">
+                    </a>
+                    <button class="header__button header__button--open js-header-open" type="button">
+                        <div class="header__button-content">
+                            <span class="header__button-line header__button-line--top"></span>
+                            <span class="header__button-line header__button-line--middle"></span>
+                            <span class="header__button-line header__button-line--bottom"></span>
                         </div>
-                        <button class="header__button header__button--close hover-default js-header-close" type="button">
-                            <div class="header__button-content">
-                                <span class="header__button-line header__button-line--top"></span>
-                                <span class="header__button-line header__button-line--middle"></span>
-                                <span class="header__button-line header__button-line--bottom"></span>
+                        <span class="hidden">This button opens the menu.</span>
+                    </button>
+                    <div class="header__menu js-header-menu">
+                        <div class="header__menu-top">
+                            <div class="header__languages">
+                                <a class="header__language-link hover-default header__language-link--active" href="javascript:;">Srpski</a>
+                                <a class="header__language-link hover-default" href="javascript:;">English</a>
                             </div>
-                            <span class="hidden">This button closes the menu.</span>
-                        </button>
+                            <button class="header__button header__button--close hover-default js-header-close" type="button">
+                                <div class="header__button-content">
+                                    <span class="header__button-line header__button-line--top"></span>
+                                    <span class="header__button-line header__button-line--middle"></span>
+                                    <span class="header__button-line header__button-line--bottom"></span>
+                                </div>
+                                <span class="hidden">This button closes the menu.</span>
+                            </button>
+                        </div>
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="javascript:;">
+                                    <span class="header__link-icon icon-home"></span>
+                                    <span class="header__link-text">Početna</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="javascript:;">
+                                    <span class="header__link-icon icon-logo"></span>
+                                    <span class="header__link-text">O nama</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="javascript:;">
+                                    <span class="header__link-icon icon-diamond"></span>
+                                    <span class="header__link-text">Usluga privatnog bankarstvo</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="javascript:;">
+                                    <span class="header__link-icon icon-growth"></span>
+                                    <span class="header__link-text">Investiciono savetovanje</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="javascript:;">
+                                    <span class="header__link-icon icon-cards"></span>
+                                    <span class="header__link-text">VISA Infinite</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="javascript:;">
+                                    <span class="header__link-icon icon-mail"></span>
+                                    <span class="header__link-text">Kontakt</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="javascript:;">
+                                    <span class="header__link-icon icon-laptop"></span>
+                                    <span class="header__link-text">Online banking</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="header__menu-list">
-                        <li class="header__menu-item js-header-item">
-                            <a class="header__menu-link" href="javascript:;">
-                                <span class="header__link-icon icon-home"></span>
-                                <span class="header__link-text">Početna</span>
-                            </a>
-                        </li>
-                        <li class="header__menu-item js-header-item">
-                            <a class="header__menu-link" href="javascript:;">
-                                <span class="header__link-icon icon-logo"></span>
-                                <span class="header__link-text">O nama</span>
-                            </a>
-                        </li>
-                        <li class="header__menu-item js-header-item">
-                            <a class="header__menu-link" href="javascript:;">
-                                <span class="header__link-icon icon-diamond"></span>
-                                <span class="header__link-text">Usluga privatnog bankarstvo</span>
-                            </a>
-                        </li>
-                        <li class="header__menu-item js-header-item">
-                            <a class="header__menu-link" href="javascript:;">
-                                <span class="header__link-icon icon-growth"></span>
-                                <span class="header__link-text">Investiciono savetovanje</span>
-                            </a>
-                        </li>
-                        <li class="header__menu-item js-header-item">
-                            <a class="header__menu-link" href="javascript:;">
-                                <span class="header__link-icon icon-cards"></span>
-                                <span class="header__link-text">VISA Infinite</span>
-                            </a>
-                        </li>
-                        <li class="header__menu-item js-header-item">
-                            <a class="header__menu-link" href="javascript:;">
-                                <span class="header__link-icon icon-mail"></span>
-                                <span class="header__link-text">Kontakt</span>
-                            </a>
-                        </li>
-                        <li class="header__menu-item js-header-item">
-                            <a class="header__menu-link" href="javascript:;">
-                                <span class="header__link-icon icon-laptop"></span>
-                                <span class="header__link-text">Online banking</span>
-                            </a>
-                        </li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <script type="module" src="./js/main.js"></script>
-</body>
+        </header>
+        <main>
+            <section class="banner-main js-banner-main">
+                <div class="banner-main__top">
+                    <div class="banner-main__wrap wrap">
+                        <div class="banner-main__content">
+                            <h1 class="banner-main__heading h1">Uđite u svet brižljivo odabranih privilegija</h1>
+                            <a class="banner-main__main-link link-rect" href="javascript:;">
+                                Saznajte više
+                                <span class="link-rect__line link-rect__line--vertical"></span>
+                                <span class="link-rect__line link-rect__line--horizontal"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="banner-main__parallax">
+                        <div class="banner-main__parallax-holder">
+                            <div class="banner-main__background js-banner-background"></div>
+                            <div class="banner-main__person js-banner-person"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-main__bottom">
+                    <a class="banner-main__link" href="javascript:;">
+                        <span class="banner-main__link-icon icon-diamond"></span>
+                        <div class="banner-main__link-content">
+                            <h3 class="banner-main__link-heading h3">Usluga privatnog bankarstva</h3>
+                            <p class="banner-main__link-paragraph">Naše poslovanje zasniva se na partnerskom odnosu, diskreciji i individualnom pristupu.</p>
+                        </div>
+                        <span class="banner-main__link-line banner-main__link-line--vertical"></span>
+                        <span class="banner-main__link-line banner-main__link-line--horizontal"></span>
+                    </a>
+                    <a class="banner-main__link" href="javascript:;">
+                        <span class="banner-main__link-icon icon-growth"></span>
+                        <div class="banner-main__link-content">
+                            <h3 class="banner-main__link-heading h3">Investiciono savetovanje</h3>
+                            <p class="banner-main__link-paragraph">Pružićemo Vam neophodnu podršku i savete kako biste na najbolji način plasirali svoje sredstva.</p>
+                        </div>
+                        <span class="banner-main__link-line banner-main__link-line--vertical"></span>
+                        <span class="banner-main__link-line banner-main__link-line--horizontal"></span>
+                    </a>
+                    <a class="banner-main__link" href="javascript:;">
+                        <span class="banner-main__link-icon icon-cards"></span>
+                        <div class="banner-main__link-content">
+                            <h3 class="banner-main__link-heading h3">Visa Infinite kartica</h3>
+                            <p class="banner-main__link-paragraph">Uživajte u svetu VISA Infinite privilegija uz prvu metalnu karticu u Srbiji.</p>
+                        </div>
+                        <span class="banner-main__link-line banner-main__link-line--vertical"></span>
+                        <span class="banner-main__link-line banner-main__link-line--horizontal"></span>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <div style="height:200vh"></div>
+        <script type="module" src="./js/main.js"></script>
+    </body>
 </html>

@@ -7,3 +7,26 @@ button,
 input {
 	font-family: $font-default;
 }
+
+.h1 {
+	font-family: $font-futura;
+	font-weight: $light;
+	@include desktop {
+		font-size: 64px;
+		line-height: 70px;
+	}
+	@include tablet {
+		font-size: 40px;
+		line-height: 48px;
+	}
+	@include phone {
+		font-size: 30px;
+		line-height: 38px;
+	}
+}
+
+.h3 {
+	font-family: $font-makeshift;
+	font-size: 1.17em;
+	line-height: 1.5;
+}

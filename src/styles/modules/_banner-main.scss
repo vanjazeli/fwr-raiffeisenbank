@@ -1,0 +1,176 @@
+// ========================================
+// banner-main
+// ========================================
+
+.banner-main {
+	position: relative;
+}
+
+.banner-main__top {
+	overflow: hidden;
+	height: 100vh;
+	max-height: 2000px;
+	position: relative;
+	background-color: $grey-100;
+	isolation: isolate;
+	@include large {
+		min-height: 950px;
+	}
+	@include phone {
+		min-height: 750px;
+	}
+}
+
+.banner-main__wrap {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.banner-main__heading {
+	color: $white;
+	@include desktop {
+		max-width: 510px;
+		margin-bottom: 21px;
+	}
+	@include tablet {
+		max-width: 320px;
+		margin: 0 0 35px 4px;
+	}
+	@include phone {
+		margin: 0 0 32px 4px;
+	}
+}
+
+.banner-main__main-link {
+	@include phone {
+		transform: translate(-4px, 4px);
+	}
+}
+
+.banner-main__parallax {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+}
+
+.banner-main__parallax-holder {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+
+.banner-main__background {
+	background: url('../assets/images/hexagon-background.jpg');
+	position: absolute;
+	top: 0;
+	left: -25%;
+	height: 100%;
+	width: 150%;
+	background-size: cover;
+	background-position: 50%;
+}
+
+.banner-main__person {
+	background: url('../assets/images/banner-person.png') no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include phone {
+		background-position: 65%;
+	}
+}
+
+.banner-main__bottom {
+	display: grid;
+	@include desktop {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: calc(100vw - 40px);
+		max-width: 1200px;
+		background-color: rgba($black, 0.5);
+		backdrop-filter: blur(20px);
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@include small {
+		background-color: $black;
+	}
+}
+
+.banner-main__link {
+	display: flex;
+	align-items: center;
+	position: relative;
+	color: $white;
+	@include hover {
+		.banner-main__link-line--vertical {
+			height: 50px;
+		}
+		.banner-main__link-line--horizontal {
+			width: 50px;
+		}
+	}
+	@include desktop {
+		justify-content: center;
+		padding: 57px 52px 57px 40px;
+	}
+	@include small {
+		justify-content: flex-start;
+		padding: 59px 52px 57px 40px;
+	}
+}
+
+.banner-main__link-icon {
+	color: $gold;
+	font-size: 46px;
+	margin-right: 46px;
+	transform: translateY(8px);
+}
+
+.banner-main__link-heading {
+	margin-bottom: 10px;
+}
+
+.banner-main__link-paragraph {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.banner-main__link-line {
+	display: inline-block;
+	position: absolute;
+}
+
+.banner-main__link-line--vertical {
+	width: 2px;
+	height: 30px;
+	background: linear-gradient(to top, $gold, transparent);
+	bottom: 20px;
+	right: 20px;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: height;
+	}
+}
+
+.banner-main__link-line--horizontal {
+	width: 30px;
+	height: 2px;
+	background: linear-gradient(to left, $gold, transparent);
+	bottom: 20px;
+	right: 20px;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: width;
+	}
+}

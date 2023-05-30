@@ -1,5 +1,4 @@
 import { gsap } from 'gsap';
-import helpers from './helpers';
 
 const header = {
 	openButton: document.querySelector('.js-header-open'),
@@ -13,16 +12,17 @@ const header = {
 
 	settings: function () {
 		this.openButton.addEventListener('click', () => {
+			setTimeout(() => {
+				this.closeButton.classList.add('header__button--active');
+			}, 500);
 			gsap
 				.timeline()
 				.add('start')
-				.add(helpers.disableScroll(), 'start')
 				.add(gsap.set(this.menu, { display: 'block' }), 'start')
 				.add('slideMenu')
 				.add(gsap.to(this.menu, { right: 0 }), 'slide')
 				.add('showItems')
-				.add(gsap.to(this.menuItems, { opacity: 1, stagger: 0.05 }), 'showItems')
-				.add(this.closeButton.classList.add('header__button--active'), 'showItems');
+				.add(gsap.to(this.menuItems, { opacity: 1, stagger: 0.1 }), 'showItems');
 		});
 
 		this.closeButton.addEventListener('click', () => {
@@ -35,7 +35,6 @@ const header = {
 				.add('slideMenu')
 				.add(gsap.to(this.menu, { right: '-100%' }), 'slideMenu')
 				.add('end')
-				.add(helpers.enableScroll(), 'end')
 				.add(gsap.set(this.menu, { display: 'none' }), 'end');
 		});
 	},
