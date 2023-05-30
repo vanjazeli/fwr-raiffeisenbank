@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="diamond-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 985.22 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="m481.73,1000L55.42,553.98v-30.79l158.66-189.86h535.1l158.66,189.86v30.79l-426.31,446.02h.21ZM75.94,545.77l405.79,424.47,405.79-424.67v-14.98l-147.78-176.72H223.73l-147.78,176.72s0,15.19,0,15.19Z"/>
+  <rect class="cls-1" x="65.68" y="516.63" width="831.9" height="20.53"/>
+  <polygon class="cls-1" points="491.17 989.33 472.29 981.12 667.49 527.09 581.9 348.11 600.37 339.29 690.07 526.68 491.17 989.33"/>
+  <polygon class="cls-1" points="472.29 989.33 273.4 526.68 362.89 339.29 381.36 348.11 295.98 527.09 491.17 981.12 472.29 989.33"/>
+  <rect class="cls-1" x="143.06" y="847.7" width="20.53" height="45.77"/>
+  <rect class="cls-1" x="143.06" y="939.45" width="20.53" height="45.77"/>
+  <rect class="cls-1" x="175.08" y="906.2" width="43.72" height="20.53"/>
+  <rect class="cls-1" x="87.64" y="906.2" width="43.72" height="20.53"/>
+  <rect class="cls-1" x="515.62" y="196.04" width="63.42" height="20.53" transform="translate(20.09 459.57) rotate(-46.31)"/>
+  <rect class="cls-1" x="625.3" y="81.39" width="63.42" height="20.53" transform="translate(136.91 503.42) rotate(-46.31)"/>
+  <rect class="cls-1" x="646.45" y="174.45" width="20.53" height="63.42" transform="translate(39.5 510.82) rotate(-43.7)"/>
+  <rect class="cls-1" x="537.08" y="59.88" width="20.53" height="63.42" transform="translate(88.35 403.52) rotate(-43.7)"/>
+  <rect class="cls-1" x="99.14" width="20.53" height="68.76"/>
+  <rect class="cls-1" x="99.14" y="160.3" width="20.53" height="68.76"/>
+  <rect class="cls-1" x="153.33" y="104.27" width="65.68" height="20.53"/>
+  <rect class="cls-1" y="104.27" width="65.68" height="20.53"/>
+  <rect class="cls-1" x="909.28" y="206.28" width="20.53" height="45.77"/>
+  <rect class="cls-1" x="909.28" y="297.82" width="20.53" height="45.77"/>
+  <rect class="cls-1" x="853.86" y="264.78" width="43.72" height="20.53"/>
+  <rect class="cls-1" x="941.5" y="264.78" width="43.72" height="20.53"/>
+</svg>

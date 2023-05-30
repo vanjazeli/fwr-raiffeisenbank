@@ -3,6 +3,13 @@
 // ========================================
 
 .header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.header__holder {
 	position: relative;
 	@include large {
 		padding-top: 40px;
@@ -68,6 +75,9 @@
 			transition-property: opacity, transform;
 		}
 	}
+	@include phone {
+		transform: translateY(-3px);
+	}
 }
 
 .header__button--active {
@@ -116,5 +126,121 @@
 	@include animation {
 		transition: $transition-primary;
 		transition-property: width;
+	}
+}
+
+.header__menu {
+	background-color: $white;
+	display: none;
+	position: fixed;
+	top: 0;
+	right: -100%;
+	height: 100%;
+	overflow: auto;
+	@include large {
+		width: 500px;
+	}
+	@include phone {
+		width: 100%;
+	}
+}
+
+.header__menu--active {
+	right: 0;
+}
+
+.header__menu-top {
+	@include flex-sb-c;
+	border-bottom: 1px solid $grey-200;
+	@include large {
+		padding: 55px 54px 55px 64px;
+	}
+	@include phone {
+		padding: 24px 15px 24px 20px;
+	}
+}
+
+.header__languages {
+	> :not(:last-child) {
+		margin-right: 15px;
+	}
+}
+
+.header__language-link {
+	font-size: 16px;
+	font-weight: $bold;
+	color: $grey-100;
+}
+
+.header__language-link--active {
+	color: $gold;
+	pointer-events: none;
+}
+
+.header__menu-item {
+	border-bottom: 1px solid $grey-200;
+	opacity: 0;
+}
+
+.header__menu-link {
+	display: flex;
+	align-items: center;
+	background-color: $white;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: background-color;
+	}
+	@include hover {
+		background-color: $grey-100;
+		.header__link-text {
+			color: $white;
+		}
+	}
+	@include large {
+		padding: 32px 20px 32px 64px;
+	}
+	@include phone {
+		padding: 29px 20px 31px;
+	}
+}
+
+.header__link-icon {
+	display: flex;
+	align-items: center;
+	color: $gold;
+	@include large {
+		font-size: 28px;
+	}
+	@include phone {
+		font-size: 23px;
+	}
+}
+
+.header__link-icon.icon-mail,
+.header__link-icon.icon-laptop {
+	@include large {
+		font-size: 20px;
+	}
+	@include phone {
+		font-size: 17px;
+	}
+}
+
+.header__link-text {
+	font-family: $font-futura;
+	font-weight: $light;
+	color: $grey-100;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: color;
+	}
+	@include large {
+		margin-left: 34px;
+		font-size: 30px;
+		line-height: 1.5;
+	}
+	@include phone {
+		margin-left: 41px;
+		font-size: 20px;
 	}
 }
