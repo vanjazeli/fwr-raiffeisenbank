@@ -38,8 +38,11 @@
 	}
 	@include phone {
 		font-size: 14px;
-		background-color: rgba($black, 0.5);
 	}
+}
+
+.link-rect--black {
+	color: $grey-100;
 }
 
 .link-rect__line {

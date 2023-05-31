@@ -114,10 +114,10 @@
 	color: $white;
 	@include hover {
 		.banner-main__link-line--vertical {
-			height: 50px;
+			height: 60px;
 		}
 		.banner-main__link-line--horizontal {
-			width: 50px;
+			width: 60px;
 		}
 	}
 	@include desktop {

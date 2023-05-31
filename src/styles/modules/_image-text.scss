@@ -1,0 +1,128 @@
+// ========================================
+// image-text
+// ========================================
+
+.image-text {
+	position: relative;
+}
+
+.image-text__decoration-holder {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include desktop {
+		top: 150px;
+	}
+	@include small {
+		top: 120px;
+	}
+}
+
+.imagfe-text__decoration {
+	position: relative;
+}
+
+.image-text__line {
+	position: absolute;
+	width: 3px;
+	background-color: $gold;
+}
+
+.image-text__line--middle {
+	height: 100%;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.image-text__line--left,
+.image-text__line--right {
+	top: 50%;
+	transform: translateY(-50%);
+	@include desktop {
+		height: 32px;
+	}
+	@include small {
+		height: 16px;
+	}
+}
+
+.image-text__line--left {
+	left: 0;
+}
+
+.image-text__line--right {
+	right: 0;
+}
+
+.image-text__holder {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	@include desktop {
+		grid-template-columns: 1fr 1fr;
+		padding: 19.2vw 0 70px;
+	}
+	@include small {
+		padding: 205px 0 68px;
+	}
+}
+
+.image-text__image {
+	min-width: 0;
+	width: 100%;
+	@include desktop {
+		width: 97%;
+	}
+	@include tablet {
+		max-width: 580px;
+	}
+	@include phone {
+		max-width: 80vw;
+	}
+}
+
+.image-text__content {
+	@include desktop {
+		padding-left: 20%;
+		max-width: 527px;
+		justify-self: start;
+	}
+	@include tablet {
+		padding: 0 20px;
+	}
+	@include small {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	@include phone {
+		padding: 28px 20px 0;
+	}
+}
+
+.image-text__heading {
+	color: $grey-100;
+	@include large {
+		margin-bottom: 35px;
+	}
+	@include small {
+		text-align: center;
+	}
+	@include phone {
+		margin-bottom: 25px;
+	}
+}
+
+.image-text__paragraph {
+	color: $grey-300;
+	@include large {
+		margin-bottom: 35px;
+	}
+	@include small {
+		text-align: center;
+	}
+	@include phone {
+		margin-bottom: 25px;
+	}
+}
