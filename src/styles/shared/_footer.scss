@@ -1,3 +1,174 @@
 // ========================================
 // footer
 // ========================================
+
+.footer {
+	position: relative;
+	background: url('../assets/images/hexagon-background.jpg') no-repeat center center / cover;
+	padding: 68px 0 55px;
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		height: 12px;
+		width: 20%;
+		top: 0;
+		@include animation {
+			transition: $transition-slow;
+			transition-property: width;
+		}
+	}
+	&::before {
+		right: 50%;
+		background: linear-gradient(to left, $gold, transparent);
+	}
+	&::after {
+		left: 50%;
+		background: linear-gradient(to right, $gold, transparent);
+	}
+	@include hover {
+		&::before,
+		&::after {
+			width: 50%;
+		}
+	}
+}
+
+.footer__content {
+	max-width: 315px;
+	margin: 0 auto;
+	@include flex-c-c;
+	flex-direction: column;
+	@include desktop {
+		margin-bottom: 75px;
+	}
+	@include small {
+		margin-bottom: 22px;
+	}
+}
+
+.footer__icon {
+	color: $white;
+	font-size: 74px;
+	@include desktop {
+		margin-bottom: 26px;
+	}
+	@include tablet {
+		margin-bottom: 28px;
+	}
+}
+
+.footer__heading {
+	color: $white;
+	@include large {
+		margin-bottom: 24px;
+	}
+	@include phone {
+		margin-bottom: 26px;
+	}
+}
+
+.footer__text {
+	color: $white;
+	display: block;
+	text-align: center;
+}
+
+.footer__top-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.footer__top-item {
+	text-align: center;
+	display: flex;
+	color: $white;
+	line-height: 28px;
+}
+
+.footer__top-item--mod .footer__top-link {
+	margin-left: 4px;
+}
+
+.footer__top-link {
+	color: $white;
+}
+
+.footer__top-link--gold {
+	color: $gold;
+}
+
+.footer__middle-list {
+	display: flex;
+	@include desktop {
+		justify-content: center;
+		padding-right: 31px;
+		margin-bottom: 33px;
+		> :not(:last-child) {
+			margin-right: 64px;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: -38px;
+				height: 8px;
+				width: 8px;
+				background-color: $gold;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	@include small {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 36px;
+	}
+}
+
+.footer__middle-item {
+	@include small {
+		margin-bottom: 2px;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			height: 8px;
+			width: 8px;
+			background-color: $gold;
+			top: 50%;
+			left: -35px;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.footer__middle-link {
+	color: $white;
+}
+
+.footer__bottom-list {
+	display: flex;
+	justify-content: center;
+	@include desktop {
+		padding-right: 84px;
+		> :not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+	@include small {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.footer__bottom-item {
+	@include small {
+		margin-bottom: 2px;
+	}
+}
+
+.footer__bottom-link {
+	color: rgba($white, 0.6);
+}

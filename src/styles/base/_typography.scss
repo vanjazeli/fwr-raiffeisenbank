@@ -42,6 +42,13 @@ input {
 }
 
 .h3 {
+	font-family: $font-futura;
+	font-weight: $regular;
+	font-size: 24px;
+	line-height: 28px;
+}
+
+.h4 {
 	font-family: $font-makeshift;
 	font-size: 1.17em;
 	line-height: 1.5;
@@ -60,4 +67,10 @@ input {
 .paragraph-default--bold {
 	letter-spacing: -0.02em;
 	font-weight: $bold;
+}
+
+.paragraph-small {
+	font-family: $font-noto;
+	font-size: 14px;
+	line-height: 28px;
 }

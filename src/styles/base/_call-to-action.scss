@@ -73,3 +73,45 @@
 		transition-property: width;
 	}
 }
+
+.link-underline {
+	font-family: $font-noto;
+	font-size: 14px;
+	line-height: 28px;
+	background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, $gold, $gold);
+	background-size: 100% 0.1em, 0 0.1em;
+	background-position: 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 400ms;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: background-size, color;
+	}
+	@include hover {
+		background-size: 0 0.1em, 100% 0.1em;
+		color: $gold;
+	}
+}
+
+.link-underline--gold {
+	color: $gold;
+}
+
+.link-underline--bigger {
+	font-size: 16px;
+	line-height: 19px;
+	letter-spacing: -0.02em;
+}
+
+.link-tiny {
+	font-size: 12px;
+	line-height: 17px;
+	color: $white;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: color;
+	}
+	@include hover {
+		color: $white;
+	}
+}

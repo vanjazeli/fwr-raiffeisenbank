@@ -26,6 +26,7 @@
 	position: absolute;
 	width: 3px;
 	background-color: $gold;
+	border-radius: 100vmax;
 }
 
 .image-text__line--middle {
@@ -61,7 +62,7 @@
 	align-items: center;
 	@include desktop {
 		grid-template-columns: 1fr 1fr;
-		padding: 19.2vw 0 70px;
+		padding: 19.2vw 0 10.93vw;
 	}
 	@include small {
 		padding: 205px 0 68px;
