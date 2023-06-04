@@ -27,10 +27,10 @@
 	@include hover {
 		color: $gold;
 		.link-rect__line--vertical {
-			height: 30px;
+			height: 40px;
 		}
 		.link-rect__line--horizontal {
-			width: 30px;
+			width: 40px;
 		}
 	}
 	@include large {

@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import helpers from './helpers';
 
 const header = {
 	openButton: document.querySelector('.js-header-open'),
@@ -12,6 +13,7 @@ const header = {
 
 	settings: function () {
 		this.openButton.addEventListener('click', () => {
+			helpers.disableScroll();
 			setTimeout(() => {
 				this.closeButton.classList.add('header__button--active');
 			}, 500);
@@ -26,6 +28,7 @@ const header = {
 		});
 
 		this.closeButton.addEventListener('click', () => {
+			helpers.enableScroll();
 			gsap
 				.timeline()
 				.add('changeButton')

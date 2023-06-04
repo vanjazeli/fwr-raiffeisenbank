@@ -4,6 +4,115 @@
 
 .image-text {
 	position: relative;
+	isolation: isolate;
+}
+
+.image-text__parallax {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+}
+
+.image-text__parallax-holder {
+	position: relative;
+	height: 100%;
+}
+
+.image-text__hexagon {
+	filter: drop-shadow(10px 20px 20px rgba($black, 0.15));
+	position: absolute;
+}
+
+.image-text__hexagon--one {
+	bottom: 16%;
+	left: 32%;
+	transform: rotate(30deg);
+	.image-text__hexagon-shape {
+		width: 259px;
+		height: 300px;
+		background-color: $white;
+	}
+}
+
+.image-text__hexagon--two {
+	bottom: 58%;
+	left: 45.5%;
+	transform: rotate(30deg);
+	.image-text__hexagon-shape {
+		width: 134px;
+		height: 155px;
+		background-color: $white;
+	}
+}
+
+.image-text__hexagon--three {
+	bottom: 57%;
+	left: 30%;
+	transform: rotate(30deg);
+	.image-text__hexagon-shape {
+		width: 134px;
+		height: 155px;
+		background-color: rgba($black, 0.07);
+	}
+}
+
+.image-text__hexagon--four {
+	bottom: 54%;
+	left: 16%;
+	transform: rotate(30deg);
+	.image-text__hexagon-shape {
+		width: 134px;
+		height: 155px;
+		background-color: rgba($black, 0.07);
+	}
+}
+
+.image-text__hexagon--five {
+	bottom: 48%;
+	left: 14%;
+	transform: rotate(30deg);
+	.image-text__hexagon-shape {
+		width: 134px;
+		height: 155px;
+		background-color: rgba($black, 0.07);
+	}
+}
+
+.image-text__hexagon--six {
+	bottom: 17%;
+	left: 4%;
+	transform: rotate(30deg);
+	.image-text__hexagon-shape {
+		width: 173px;
+		height: 200px;
+		background-color: rgba($black, 0.07);
+	}
+}
+
+.image-text__hexagon--seven {
+	bottom: 30%;
+	left: 13%;
+	transform: rotate(30deg);
+	.image-text__hexagon-shape {
+		width: 87px;
+		height: 100px;
+		background-color: rgba($black, 0.07);
+	}
+}
+
+.image-text__hexagon--eight {
+	bottom: 26%;
+	left: 15%;
+	transform: rotate(30deg);
+	.image-text__hexagon-shape {
+		width: 87px;
+		height: 100px;
+		background-color: rgba($black, 0.07);
+	}
+}
+
+.image-text__hexagon-shape {
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 .image-text__decoration-holder {

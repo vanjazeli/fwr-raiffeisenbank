@@ -1,16 +1,20 @@
 import { gsap } from 'gsap';
-import helpers from './helpers';
 
 const imageText = {
 	decoration: document.querySelector('.js-image-text-decoration'),
 	module: document.querySelector('.js-image-text'),
 	decorationActive: false,
 
+	parallaxOne: document.querySelectorAll('.js-image-text-parallax-one'),
+	parallaxTwo: document.querySelectorAll('.js-image-text-parallax-two'),
+	parallaxThree: document.querySelectorAll('.js-image-text-parallax-three'),
+
 	windowWidth: null,
 
 	init: function () {
 		this.decorationSettings();
 		this.loadAndResize();
+		this.parallax();
 	},
 
 	decorationSettings: function () {
@@ -68,10 +72,34 @@ const imageText = {
 			if (this.windowWidth <= 992) {
 				this.decorationActive = true;
 				gsap.set(this.decoration, { width: '16px', height: '66px' });
+				gsap.set(this.parallaxOne, { x: '', y: '' });
+				gsap.set(this.parallaxTwo, { x: '', y: '' });
+				gsap.set(this.parallaxThree, { x: '', y: '' });
 			}
 		};
 		window.addEventListener('load', decorationResize);
 		window.addEventListener('resize', decorationResize);
+	},
+
+	parallax: function () {
+		this.module.addEventListener('mousemove', (e) => {
+			if (this.windowWidth > 992) {
+				const cursorXPositionPercentage = e.clientX / this.module.offsetWidth;
+				const cursorYPositionPercentage = e.clientY / this.module.offsetHeight;
+
+				const newXPositionOne = cursorXPositionPercentage * 30;
+				const newYPositionOne = cursorYPositionPercentage * 30;
+				gsap.to(this.parallaxOne, { x: newXPositionOne, y: newYPositionOne, duration: 0.2 });
+
+				const newXPositionTwo = cursorXPositionPercentage * -20;
+				const newYPositionTwo = cursorYPositionPercentage * -20;
+				gsap.to(this.parallaxTwo, { x: newXPositionTwo, y: newYPositionTwo, duration: 0.2 });
+
+				const newXPositionThree = cursorXPositionPercentage * -10;
+				const newYPositionThree = cursorYPositionPercentage * 10;
+				gsap.to(this.parallaxThree, { x: newXPositionThree, y: newYPositionThree, duration: 0.2 });
+			}
+		});
 	},
 };
 
