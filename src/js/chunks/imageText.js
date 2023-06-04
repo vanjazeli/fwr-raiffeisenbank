@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import helpers from './helpers';
 
 const imageText = {
 	decoration: document.querySelector('.js-image-text-decoration'),
@@ -13,7 +14,7 @@ const imageText = {
 	},
 
 	decorationSettings: function () {
-		this.module.addEventListener('mouseenter', () => {
+		const openDecoration = () => {
 			this.decorationActive = true;
 			gsap.killTweensOf(this.decoration);
 			if (this.windowWidth > 992) {
@@ -31,9 +32,9 @@ const imageText = {
 					.add('width')
 					.add(gsap.to(this.decoration, { width: '16px' }), 'width');
 			}
-		});
+		};
 
-		this.module.addEventListener('mouseleave', () => {
+		const closeDecoration = () => {
 			this.decorationActive = false;
 			gsap.killTweensOf(this.decoration);
 			if (this.windowWidth > 992) {
@@ -51,22 +52,21 @@ const imageText = {
 					.add('height')
 					.add(gsap.to(this.decoration, { height: '16px' }), 'height');
 			}
-		});
+		};
+
+		this.module.addEventListener('mouseenter', openDecoration);
+		this.module.addEventListener('mouseleave', closeDecoration);
 	},
 
 	loadAndResize: function () {
 		const decorationResize = () => {
 			this.windowWidth = window.innerWidth;
-			if (this.windowWidth > 992 && !this.decorationActive) {
+			if (this.windowWidth > 992) {
+				this.decorationActive = false;
 				gsap.set(this.decoration, { width: '2px', height: '32px' });
 			}
-			if (this.windowWidth > 992 && this.decorationActive) {
-				gsap.set(this.decoration, { width: '32px', height: '132px' });
-			}
-			if (this.windowWidth <= 992 && !this.decorationActive) {
-				gsap.set(this.decoration, { width: '2px', height: '16px' });
-			}
-			if (this.windowWidth <= 992 && this.decorationActive) {
+			if (this.windowWidth <= 992) {
+				this.decorationActive = true;
 				gsap.set(this.decoration, { width: '16px', height: '66px' });
 			}
 		};
