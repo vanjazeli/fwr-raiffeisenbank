@@ -5,6 +5,15 @@
 body {
 	position: relative;
 	-ms-overflow-style: none;
+	opacity: 0;
+	@include animation {
+		transition: $transition-secondary;
+		transition-property: opacity;
+	}
+}
+
+.body--opacity {
+	opacity: 1;
 }
 
 ::-webkit-scrollbar {

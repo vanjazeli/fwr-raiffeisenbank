@@ -5,6 +5,7 @@
 .image-text {
 	position: relative;
 	isolation: isolate;
+	overflow: hidden;
 }
 
 .image-text__parallax {
@@ -61,7 +62,16 @@
 	.image-text__hexagon-shape {
 		width: 134px;
 		height: 155px;
-		background-color: rgba($black, 0.07);
+	}
+	@include large {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
 	}
 }
 
@@ -72,7 +82,16 @@
 	.image-text__hexagon-shape {
 		width: 134px;
 		height: 155px;
-		background-color: rgba($black, 0.07);
+	}
+	@include large {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
 	}
 }
 
@@ -83,7 +102,16 @@
 	.image-text__hexagon-shape {
 		width: 134px;
 		height: 155px;
-		background-color: rgba($black, 0.07);
+	}
+	@include large {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
 	}
 }
 
@@ -94,7 +122,16 @@
 	.image-text__hexagon-shape {
 		width: 173px;
 		height: 200px;
-		background-color: rgba($black, 0.07);
+	}
+	@include large {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
 	}
 }
 
@@ -105,7 +142,16 @@
 	.image-text__hexagon-shape {
 		width: 87px;
 		height: 100px;
-		background-color: rgba($black, 0.07);
+	}
+	@include large {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
 	}
 }
 
@@ -117,6 +163,11 @@
 		width: 87px;
 		height: 100px;
 		background-color: rgba($black, 0.07);
+	}
+	@include phone {
+		.image-text__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
 	}
 }
 

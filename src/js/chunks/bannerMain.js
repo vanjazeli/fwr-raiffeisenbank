@@ -18,8 +18,8 @@ const bannerMain = {
 				const cursorXPositionPercentage = e.clientX / this.module.offsetWidth;
 				const newXPositionPerson = cursorXPositionPercentage * -20;
 				const newXpositionBackground = cursorXPositionPercentage * 30;
-				gsap.to(this.background, { x: newXpositionBackground, duration: 0.2 });
-				gsap.to(this.person, { x: newXPositionPerson, duration: 0.2 });
+				gsap.to(this.background, { x: newXpositionBackground, duration: 0.4 });
+				gsap.to(this.person, { x: newXPositionPerson, duration: 0.4 });
 			}
 		});
 	},

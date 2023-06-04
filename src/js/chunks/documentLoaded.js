@@ -7,6 +7,8 @@ const documentLoaded = {
 		window.addEventListener('load', () => {
 			const html = document.querySelector('html');
 			html.classList.add('loaded');
+			const body = document.querySelector('body');
+			body.classList.add('body--opacity');
 		});
 	},
 };

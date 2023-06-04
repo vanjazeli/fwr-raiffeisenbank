@@ -28,18 +28,45 @@
 	justify-content: flex-start;
 }
 
-.banner-main__heading {
+.banner-main__text {
 	color: $white;
 	@include desktop {
-		max-width: 510px;
 		margin-bottom: 21px;
 	}
 	@include tablet {
-		max-width: 320px;
-		margin: 0 0 35px 4px;
+		margin-bottom: 35px;
 	}
 	@include phone {
-		margin: 0 0 32px 4px;
+		margin-bottom: 32px;
+	}
+}
+
+.banner-main__heading {
+	color: $white;
+	@include desktop {
+		max-width: 540px;
+		margin-bottom: 21px;
+	}
+	@include tablet {
+		max-width: 373px;
+		margin: 0 0 10px 4px;
+	}
+	@include phone {
+		margin: 0 0 0 4px;
+	}
+}
+
+.banner-main__paragraph {
+	@include desktop {
+		max-width: 537px;
+		margin: 0 0 43px 4px;
+	}
+	@include tablet {
+		max-width: 350px;
+		margin: 0 0 52px 4px;
+	}
+	@include phone {
+		display: none;
 	}
 }
 
@@ -76,9 +103,6 @@
 }
 
 .banner-main__person {
-	background: url('../assets/images/banner-person.png') no-repeat;
-	background-size: cover;
-	background-position: 50%;
 	position: absolute;
 	width: 100%;
 	height: 100%;

@@ -89,15 +89,15 @@ const imageText = {
 
 				const newXPositionOne = cursorXPositionPercentage * 30;
 				const newYPositionOne = cursorYPositionPercentage * 30;
-				gsap.to(this.parallaxOne, { x: newXPositionOne, y: newYPositionOne, duration: 0.2 });
+				gsap.to(this.parallaxOne, { x: newXPositionOne, y: newYPositionOne, duration: 0.4 });
 
 				const newXPositionTwo = cursorXPositionPercentage * -20;
 				const newYPositionTwo = cursorYPositionPercentage * -20;
-				gsap.to(this.parallaxTwo, { x: newXPositionTwo, y: newYPositionTwo, duration: 0.2 });
+				gsap.to(this.parallaxTwo, { x: newXPositionTwo, y: newYPositionTwo, duration: 0.4 });
 
 				const newXPositionThree = cursorXPositionPercentage * -10;
 				const newYPositionThree = cursorYPositionPercentage * 10;
-				gsap.to(this.parallaxThree, { x: newXPositionThree, y: newYPositionThree, duration: 0.2 });
+				gsap.to(this.parallaxThree, { x: newXPositionThree, y: newYPositionThree, duration: 0.4 });
 			}
 		});
 	},
