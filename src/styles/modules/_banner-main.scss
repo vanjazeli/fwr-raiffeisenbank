@@ -36,6 +36,9 @@
 	@include tablet {
 		margin-bottom: 35px;
 	}
+	@include small {
+		background-color: rgba($black, 0.4);
+	}
 	@include phone {
 		margin-bottom: 32px;
 	}
@@ -71,6 +74,9 @@
 }
 
 .banner-main__main-link {
+	@include small {
+		background-color: rgb($black, 0.4);
+	}
 	@include phone {
 		transform: translate(-4px, 4px);
 	}

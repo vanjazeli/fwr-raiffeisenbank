@@ -41,6 +41,13 @@ input {
 	}
 }
 
+.h2--mod {
+	@include small {
+		font-size: 36px;
+		line-height: 1.5;
+	}
+}
+
 .h3 {
 	font-family: $font-futura;
 	font-weight: $regular;

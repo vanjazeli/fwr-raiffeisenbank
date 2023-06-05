@@ -12,6 +12,7 @@ const imageText = {
 	windowWidth: null,
 
 	init: function () {
+		if (!this.decoration) return;
 		this.decorationSettings();
 		this.loadAndResize();
 		this.parallax();
