@@ -5,12 +5,59 @@
 .image-text {
 	position: relative;
 	isolation: isolate;
-	overflow: hidden;
+}
+
+.image-text--grey {
+	background-color: $grey-400;
+}
+
+.image-text--cut {
+	@include desktop {
+		.image-text__decoration-holder {
+			top: 0;
+		}
+		.image-text__holder {
+			padding: 12.5vw 0 14.4vw;
+		}
+	}
+	@include tablet {
+		.image-text__decoration-holder {
+			top: 0;
+		}
+		.image-text__holder {
+			padding: 87px 0 120px;
+		}
+	}
+	@include phone {
+		.image-text__decoration-holder {
+			top: 0;
+		}
+		.image-text__holder {
+			padding: 70px 0 94px;
+		}
+	}
+}
+
+.image-text--reverse {
+	@include desktop {
+		.image-text__parallax {
+			transform: translateX(-50%) rotateY(180deg);
+		}
+		.image-text__image {
+			order: 2;
+		}
+		.image-text__content {
+			order: 1;
+			padding-left: 0;
+			max-width: 397px;
+		}
+	}
 }
 
 .image-text__parallax {
 	position: absolute;
 	z-index: -1;
+	overflow: hidden;
 	@include desktop {
 		max-width: 1920px;
 		width: 100%;
@@ -253,6 +300,9 @@
 }
 
 .image-text__content {
+	> :last-child {
+		margin-bottom: 0;
+	}
 	@include desktop {
 		padding-left: 20%;
 		max-width: 527px;
@@ -295,4 +345,8 @@
 	@include phone {
 		margin-bottom: 25px;
 	}
+}
+
+.image-text__line-link {
+	color: $gold;
 }
