@@ -4,6 +4,7 @@ const cardModule = {
 	inputs: document.querySelectorAll('.js-card-module-input'),
 
 	init: function () {
+		if (!this.inputs) return;
 		VanillaTilt.init();
 		this.showName();
 	},
