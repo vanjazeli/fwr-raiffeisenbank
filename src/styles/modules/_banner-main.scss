@@ -6,6 +6,30 @@
 	position: relative;
 }
 
+.banner-main--reverse {
+	.banner-main__wrap {
+		justify-content: flex-end;
+	}
+	@include desktop {
+		.banner-main__paragraph {
+			max-width: 553px;
+		}
+	}
+	@include tablet {
+		.banner-main__paragraph {
+			max-width: 553px;
+		}
+	}
+	@include phone {
+		.banner-main__heading {
+			margin: 0 4px;
+		}
+		.banner-main__person {
+			background-position: 34% !important;
+		}
+	}
+}
+
 .banner-main__top {
 	overflow: hidden;
 	height: 100vh;
@@ -26,15 +50,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-}
-
-.banner-main__wrap--reverse {
-	@include desktop {
-		justify-content: flex-end;
-		.banner-main__paragraph {
-			max-width: 553px;
-		}
-	}
 }
 
 .banner-main__text {
