@@ -7,8 +7,12 @@ const header = {
 	menu: document.querySelector('.js-header-menu'),
 	menuItems: document.querySelectorAll('.js-header-item'),
 
+	scrollLine: document.querySelector('.js-header-scroll-line'),
+
 	init: function () {
 		this.settings();
+		if (!this.scrollLine) return;
+		this.floatingLinks();
 	},
 
 	settings: function () {
@@ -39,6 +43,16 @@ const header = {
 				.add(gsap.to(this.menu, { right: '-100%' }), 'slideMenu')
 				.add('end')
 				.add(gsap.set(this.menu, { display: 'none' }), 'end');
+		});
+	},
+
+	floatingLinks: function () {
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 100) {
+				this.scrollLine.classList.add('header__floating-line--opacity');
+			} else {
+				this.scrollLine.classList.remove('header__floating-line--opacity');
+			}
 		});
 	},
 };

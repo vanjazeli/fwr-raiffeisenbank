@@ -131,6 +131,107 @@
 	}
 }
 
+.header__line {
+	position: fixed;
+	height: 1px;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	background-color: $gold;
+	z-index: 20;
+}
+
+.header__floating {
+	position: fixed;
+	right: 56px;
+	@include desktop {
+		bottom: 56px;
+	}
+	@include small {
+		bottom: 20px;
+	}
+	@include phone {
+		right: 20px;
+	}
+}
+
+.header__floating-holder {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: 1fr;
+	@include large {
+		gap: 40px;
+	}
+	@include small {
+		gap: 20px;
+	}
+}
+
+.header__floating-line {
+	height: 150px;
+	width: 2px;
+	overflow: hidden;
+	&::before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		background-color: $white;
+	}
+	@include animation {
+		transition: $transition-primary;
+		transition-property: opacity;
+		&::before {
+			animation: scroll-line 4s ease-in-out infinite;
+		}
+	}
+	@include small {
+		display: none;
+	}
+}
+
+.header__floating-line--opacity {
+	opacity: 0;
+}
+
+.header__floating-link {
+	background-color: $gold;
+	@include flex-c-c;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: background-color;
+	}
+	@include hover {
+		background-color: $white;
+		.header__floating-icon {
+			color: $gold;
+		}
+	}
+	@include desktop {
+		height: 46px;
+		width: 46px;
+	}
+	@include small {
+		height: 38px;
+		width: 38px;
+	}
+}
+
+.header__floating-icon {
+	color: $white;
+	font-size: 14px;
+	@include flex-c-c;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: color;
+	}
+}
+
+.header__floating-icon.icon-phone {
+	font-size: 16px;
+}
+
 .header__menu {
 	background-color: $white;
 	display: none;
