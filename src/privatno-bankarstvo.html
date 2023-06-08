@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        <title>Privatno bankarstvo - Raiffeisen banka</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__holder">
+                <div class="wrap">
+                    <a class="header__logo" href="index.html">
+                        <img class="header__logo-image" src="./assets/images/logo.svg" alt="logo">
+                    </a>
+                    <button class="header__button header__button--open js-header-open" type="button">
+                        <span class="header__button-content">
+                            <span class="header__button-line header__button-line--top"></span>
+                            <span class="header__button-line header__button-line--middle"></span>
+                            <span class="header__button-line header__button-line--bottom"></span>
+                        </span>
+                        <span class="hidden">Ovo dugme otvara meni.</span>
+                    </button>
+                    <div class="header__menu js-header-menu">
+                        <div class="header__menu-top">
+                            <div class="header__languages">
+                                <a class="header__language-link hover-default header__language-link--active" href="javascript:;">Srpski</a>
+                                <a class="header__language-link hover-default" href="javascript:;">English</a>
+                            </div>
+                            <button class="header__button header__button--close hover-default js-header-close" type="button">
+                                <span class="header__button-content">
+                                    <span class="header__button-line header__button-line--top"></span>
+                                    <span class="header__button-line header__button-line--middle"></span>
+                                    <span class="header__button-line header__button-line--bottom"></span>
+                                </span>
+                                <span class="hidden">Ovo dugme zatvara meni.</span>
+                            </button>
+                        </div>
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="index.html">
+                                    <span class="header__link-icon icon-home"></span>
+                                    <span class="header__link-text">Početna</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="about.html">
+                                    <span class="header__link-icon icon-logo"></span>
+                                    <span class="header__link-text">O nama</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="privatno-bankarstvo.html">
+                                    <span class="header__link-icon icon-diamond"></span>
+                                    <span class="header__link-text">Usluga privatnog bankarstvo</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="investiciono-savetovanje.html">
+                                    <span class="header__link-icon icon-growth"></span>
+                                    <span class="header__link-text">Investiciono savetovanje</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="visa-infinite.html">
+                                    <span class="header__link-icon icon-cards"></span>
+                                    <span class="header__link-text">VISA Infinite</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="kontakt.html">
+                                    <span class="header__link-icon icon-mail"></span>
+                                    <span class="header__link-text">Kontakt</span>
+                                </a>
+                            </li>
+                            <li class="header__menu-item js-header-item">
+                                <a class="header__menu-link" href="https://rol.raiffeisenbank.rs/">
+                                    <span class="header__link-icon icon-laptop"></span>
+                                    <span class="header__link-text">Online banking</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="banner-main js-banner-main">
+                <div class="banner-main__top">
+                    <div class="banner-main__wrap banner-main__wrap--reverse wrap">
+                        <div class="banner-main__content">
+                            <div class="banner-main__text">
+                                <h1 class="banner-main__heading h1">Prioritetna usluga, dugoročan partner</h1>
+                                <p class="banner-main__paragraph paragraph-large">Izborom Friedrich Wilhelm Raiffeisen Privatnog bankarstva, izabrali ste dugoročnog partnera na koga uvek možete da se oslonite.</p>
+                            </div>
+                            <a class="banner-main__main-link link-rect" href="assets/pdf/fwr-brosura.pdf" target="_blank">
+                                Pogledajte brošuru
+                                <span class="link-rect__line link-rect__line--vertical"></span>
+                                <span class="link-rect__line link-rect__line--horizontal"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="banner-main__parallax">
+                        <div class="banner-main__parallax-holder">
+                            <div class="banner-main__background js-banner-background"></div>
+                            <div class="banner-main__person js-banner-person" style="background: url('../assets/images/banner-woman-1.png') no-repeat 50% / cover;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="wrap">
+                <div class="footer__content">
+                    <span class="footer__icon icon-logo"></span>
+                    <h3 class="footer__heading h3">Raiffeisen banka a.d. Beograd</h3>
+                    <span class="footer__text paragraph-small">Friedrich Wilhelm Raiffeisen Private Banking</span>
+                    <ul class="footer__top-list">
+                        <li class="footer__top-item">
+                            <a class="footer__top-link link-underline" href="https://goo.gl/maps/xtHtsXgQE5RjJrEu5">Đorđa Stanojevića 16, 11000 Beograd, Srbija</a>
+                        </li>
+                        <li class="footer__top-item">
+                            <a class="footer__top-link link-underline" href="tel:+381112208000">Tel +381 11 220 8000</a>
+                        </li>
+                        <li class="footer__top-item footer__top-item--mod">
+                            Email:
+                            <a class="footer__top-link footer__top-link--gold link-underline" href="mailto:privatno_bankarstvo@raiffeisenbank.rs">privatno_bankarstvo@raiffeisenbank.rs</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="footer__middle-list">
+                    <li class="footer__middle-item">
+                        <a class="footer__middle-link link-underline link-underline--bigger" href="index.html">Početna</a>
+                    </li>
+                    <li class="footer__middle-item">
+                        <a class="footer__middle-link link-underline link-underline--bigger" href="about.html">O nama</a>
+                    </li>
+                    <li class="footer__middle-item">
+                        <a class="footer__middle-link link-underline link-underline--bigger" href="visa-infinite.html">VISA Infinite</a>
+                    </li>
+                    <li class="footer__middle-item">
+                        <a class="footer__middle-link link-underline link-underline--bigger" href="privatno-bankarstvo.html">Privatno bankarstvo</a>
+                    </li>
+                    <li class="footer__middle-item">
+                        <a class="footer__middle-link link-underline link-underline--bigger" href="investiciono-savetovanje.html">Investiciono savetovanje</a>
+                    </li>
+                    <li class="footer__middle-item">
+                        <a class="footer__middle-link link-underline link-underline--bigger" href="kontakt.html">Kontakt</a>
+                    </li>
+                </ul>
+                <ul class="footer__bottom-list">
+                    <li class="footer__bottom-item">
+                        <a class="footer__bottom-link link-tiny" href="https://www.raiffeisenbank.rs/iskljucenje-odgovornosti/" target="_blank">Isključenje odgovornosti</a>
+                    </li>
+                    <li class="footer__bottom-item">
+                        <a class="footer__bottom-link link-tiny" href="https://www.raiffeisenbank.rs/molbe-zahtevi-i-prigovori" target="_blank">Prigovori</a>
+                    </li>
+                    <li class="footer__bottom-item">
+                        <a class="footer__bottom-link link-tiny" href="assets/pdf/izjava-klijenata.pdf" target="_blank">Izjava funkcionera</a>
+                    </li>
+                    <li class="footer__bottom-item">
+                        <a class="footer__bottom-link link-tiny" href="assets/pdf/zastita-podataka.pdf" target="_blank">Zaštita podataka</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+        <script type="module" src="./js/main.js"></script>
+    </body>
+</html>

@@ -28,6 +28,15 @@
 	justify-content: flex-start;
 }
 
+.banner-main__wrap--reverse {
+	@include desktop {
+		justify-content: flex-end;
+		.banner-main__paragraph {
+			max-width: 553px;
+		}
+	}
+}
+
 .banner-main__text {
 	color: $white;
 	@include desktop {
