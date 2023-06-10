@@ -16,6 +16,9 @@
 		}
 	}
 	@include tablet {
+		.banner-main__content {
+			max-width: 381px;
+		}
 		.banner-main__paragraph {
 			max-width: 553px;
 		}

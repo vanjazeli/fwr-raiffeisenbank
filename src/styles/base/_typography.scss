@@ -48,6 +48,13 @@ input {
 	}
 }
 
+.h2--small {
+	@include all {
+		font-size: 44px;
+		line-height: 50px;
+	}
+}
+
 .h3 {
 	font-family: $font-futura;
 	font-weight: $regular;

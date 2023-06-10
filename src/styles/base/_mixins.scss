@@ -53,6 +53,12 @@ $tablet: 768px;
 	}
 }
 
+@mixin all {
+	@media screen and (min-width: 1px) {
+		@content;
+	}
+}
+
 @mixin hover {
 	&:hover {
 		@media screen and (min-width: calc(#{$desktop} + 1px)) {

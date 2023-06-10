@@ -1,0 +1,218 @@
+// ========================================
+// modal-cards
+// ========================================
+
+.modal-cards {
+	position: relative;
+	background: linear-gradient(180deg, #141516 1%, #242424);
+	@include desktop {
+		padding: 164px 0 425px;
+	}
+	@include tablet {
+		padding: 150px 0 386px;
+	}
+	@include phone {
+		padding: 100px 0 170px;
+	}
+}
+
+.modal-cards__wrap {
+	@include desktop {
+		max-width: 1080px;
+	}
+	@include tablet {
+		max-width: 480px;
+	}
+}
+
+.modal-cards__decoration-holder {
+	display: none;
+}
+
+.modal-cards__heading {
+	color: $gold;
+	text-align: center;
+	@include desktop {
+		margin-bottom: 186px;
+	}
+	@include small {
+		margin-bottom: 130px;
+	}
+}
+
+.modal-cards__cards {
+	display: grid;
+	@include desktop {
+		grid-template-columns: repeat(2, 1fr);
+		padding-right: 20px;
+		column-gap: 180px;
+		row-gap: 162px;
+		align-items: start;
+		> :nth-child(even) {
+			transform: translateY(120px);
+		}
+	}
+	@include tablet {
+		padding-right: 20px;
+		row-gap: 121px;
+	}
+	@include phone {
+		row-gap: 120px;
+	}
+}
+
+.card {
+	position: relative;
+	isolation: isolate;
+	box-shadow: 0 21px 38px $black;
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		background-color: $gold;
+	}
+	@include animation {
+		&::after {
+			transition: $transition-primary;
+			transition-property: bottom right;
+		}
+	}
+	@include hover {
+		&::after {
+			bottom: 1px;
+			right: 1px;
+		}
+		.card__icon {
+			transform: rotate(90deg);
+		}
+	}
+	@include large {
+		&::after {
+			height: 120px;
+			width: 120px;
+			bottom: -20px;
+			right: -20px;
+		}
+	}
+	@include phone {
+		&::after {
+			height: 80px;
+			width: 80px;
+			bottom: -10px;
+			right: -10px;
+		}
+	}
+}
+
+.card--no-image {
+	.card__heading {
+		font-size: 44px;
+		line-height: 50px;
+	}
+	@include large {
+		.card__wrap {
+			padding: 70px 48px 124px;
+		}
+	}
+	@include phone {
+		.card__wrap {
+			padding: 70px 20px 124px;
+		}
+	}
+}
+
+.card__wrap {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	background: url('../assets/images/hexagon-background.jpg') center left / cover;
+	background-size: 500%;
+	@include large {
+		padding: 0 48px 72px;
+	}
+	@include phone {
+		padding: 0 20px 72px;
+	}
+}
+
+.card__button {
+	height: calc(100% + 20px);
+	width: 100%;
+	position: absolute;
+	top: -20px;
+	left: 0;
+	z-index: 2;
+}
+
+.card__image {
+	transform: translateY(-20px);
+	align-self: center;
+	margin-bottom: 4px;
+	width: auto;
+	border-radius: 30px;
+	@include large {
+		height: 234px;
+	}
+	@include phone {
+		height: 260px;
+	}
+}
+
+.card__heading {
+	color: $gold;
+	margin-bottom: 26px;
+	font-family: $font-futura;
+	font-weight: $light;
+	@include large {
+		font-size: 56px;
+		line-height: 56px;
+		letter-spacing: -0.002em;
+	}
+	@include phone {
+		font-size: 36px;
+		line-height: 36px;
+	}
+}
+
+.card__paragraph {
+	color: rgba($white, 0.6);
+	@include phone {
+		font-size: 18px;
+		letter-spacing: -0.002em;
+		line-height: 28px;
+	}
+}
+
+.card__icon {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	bottom: 20px;
+	right: 20px;
+	transform-origin: 50% 50%;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: transform;
+	}
+}
+
+.card__icon-wrap {
+	position: relative;
+	height: 100%;
+	&::before,
+	&::after {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		content: '';
+		width: 100%;
+		height: 2px;
+		background-color: $gold;
+	}
+	&::before {
+		transform: translateY(-50%);
+	}
+	&::after {
+		transform: translateY(-50%) rotate(90deg);
+	}
+}
