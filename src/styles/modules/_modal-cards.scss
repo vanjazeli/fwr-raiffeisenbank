@@ -135,6 +135,7 @@
 		position: absolute;
 		z-index: -1;
 		background-color: $gold;
+		pointer-events: none;
 	}
 	@include animation {
 		&::after {
@@ -214,12 +215,16 @@
 	align-self: center;
 	margin-bottom: 4px;
 	width: auto;
-	border-radius: 30px;
+	mask-image: url('../assets/images/rounded-hexagon.svg');
+	mask-repeat: no-repeat;
+	mask-position: center;
 	@include large {
 		height: 234px;
+		max-width: 264px;
 	}
 	@include phone {
 		height: 260px;
+		max-width: 293px;
 	}
 }
 
