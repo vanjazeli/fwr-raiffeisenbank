@@ -1,0 +1,156 @@
+// ========================================
+// hexa-info
+// ========================================
+
+.hexa-info {
+	position: relative;
+	@include desktop {
+		padding: 84px 0 70px;
+	}
+	@include tablet {
+		padding: 71px 0 68px;
+	}
+	@include phone {
+		padding: 70px 0;
+	}
+}
+
+.hexa-info--cut {
+	@include desktop {
+		.hexa-info__decoration-holder {
+			top: 0;
+		}
+	}
+	@include tablet {
+		.hexa-info__decoration-holder {
+			top: 0;
+		}
+	}
+	@include phone {
+		.hexa-info__decoration-holder {
+			top: 0;
+		}
+	}
+}
+
+.hexa-info__decoration-holder {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include desktop {
+		top: 150px;
+	}
+	@include small {
+		top: 120px;
+	}
+}
+
+.hexa-info__decoration {
+	position: relative;
+}
+
+.hexa-info__line {
+	position: absolute;
+	width: 3px;
+	background-color: $gold;
+}
+
+.hexa-info__line--middle {
+	height: 100%;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.hexa-info__line--left,
+.hexa-info__line--right {
+	top: 50%;
+	transform: translateY(-50%);
+	@include desktop {
+		height: 32px;
+	}
+	@include small {
+		height: 16px;
+	}
+}
+
+.hexa-info__line--left {
+	left: 0;
+}
+
+.hexa-info__line--right {
+	right: 0;
+}
+
+.hexa-info__heading {
+	text-align: center;
+	@include desktop {
+		margin-bottom: 86px;
+	}
+	@include small {
+		margin-bottom: 30px;
+	}
+}
+
+.hexa-info__items {
+	display: flex;
+	flex-wrap: wrap;
+	@include tablet {
+		padding: 0 24px 0 20px;
+	}
+}
+
+.hexa-info__item {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 0 auto;
+	@include desktop {
+		width: 33.33%;
+		padding: 20px;
+	}
+	@include tablet {
+		width: 50%;
+		padding: 20px 20px 22px;
+	}
+	@include phone {
+		padding: 20px 20px 20px 27px;
+	}
+}
+
+.hexa-info__item-image {
+	max-height: 234px;
+	width: auto;
+	max-width: 100%;
+	mask-image: url('../assets/images/rounded-hexagon.svg');
+	mask-position: center;
+	mask-repeat: no-repeat;
+	@include desktop {
+		margin-bottom: 50px;
+	}
+	@include small {
+		margin-bottom: 40px;
+	}
+}
+
+.hexa-info__item-heading {
+	text-align: center;
+	color: $grey-100;
+	@include desktop {
+		margin-bottom: 34px;
+	}
+	@include tablet {
+		margin-bottom: 27px;
+	}
+	@include phone {
+		margin-bottom: 24px;
+	}
+}
+
+.hexa-info__item-paragraph {
+	text-align: center;
+	color: rgba($grey-100, 0.6);
+	@include phone {
+		max-width: 264px;
+	}
+}

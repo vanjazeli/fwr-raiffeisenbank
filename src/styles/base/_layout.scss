@@ -7,7 +7,7 @@ body {
 	-ms-overflow-style: none;
 	opacity: 0;
 	@include animation {
-		transition: $transition-secondary;
+		transition: $transition-slow;
 		transition-property: opacity;
 	}
 }

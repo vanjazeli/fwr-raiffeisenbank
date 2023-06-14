@@ -70,6 +70,15 @@ input {
 	line-height: 28px;
 }
 
+.h3--small {
+	@include tablet {
+		letter-spacing: 0.02em;
+	}
+	@include small {
+		line-height: 48px;
+	}
+}
+
 .h4 {
 	font-family: $font-makeshift;
 	font-size: 1.17em;
@@ -96,6 +105,16 @@ input {
 	}
 	@include phone {
 		font-size: 16px;
+	}
+}
+
+.paragraph-default--larger {
+	@include large {
+		line-height: 28px;
+	}
+	@include phone {
+		font-size: 18px;
+		line-height: 28px;
 	}
 }
 
