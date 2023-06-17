@@ -59,7 +59,7 @@ input {
 	@include all {
 		font-size: 56px;
 		line-height: 56px;
-		letter-spacing: -0.002em;
+		letter-spacing: -0.02em;
 	}
 }
 
@@ -121,6 +121,13 @@ input {
 .paragraph-default--bold {
 	letter-spacing: -0.02em;
 	font-weight: $bold;
+}
+
+.paragraph-big {
+	font-family: $font-futura;
+	font-weight: $light;
+	font-size: 24px;
+	line-height: 1.5em;
 }
 
 .paragraph-small {
