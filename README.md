@@ -1,4 +1,4 @@
-# Raiffeisenbank Serbia
+# Raiffeisen Bank Serbia
 Front-end code for "Raiffeisen Bank Serbia" website.
 
 ## Demo
