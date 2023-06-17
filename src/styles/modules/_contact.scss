@@ -5,7 +5,13 @@
 .contact {
 	position: relative;
 	@include desktop {
-		padding: 150px 0 1px;
+		padding: 150px 0 200px;
+	}
+	@include tablet {
+		padding: 198px 20px;
+	}
+	@include phone {
+		padding: 104px 20px 105px;
 	}
 }
 
@@ -86,19 +92,32 @@
 }
 
 .contact__heading {
-	@include desktop {
+	@include large {
 		margin-bottom: 43px;
 	}
 }
 
 .contact__paragraph {
 	margin-bottom: 40px;
+	@include phone {
+		text-align: center;
+	}
 }
 
 .contact__input-wrap {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 40px;
+	margin-bottom: 38px;
+	@include large {
+		&:last-of-type {
+			margin-bottom: 60px;
+		}
+	}
+	@include phone {
+		&:last-of-type {
+			margin-bottom: 40px;
+		}
+	}
 }
 
 .contact__label {
@@ -110,20 +129,6 @@
 	font-size: 18px;
 	padding: 20px 24px;
 }
-
-.contact__checkbox-wrap {
-	display: flex;
-}
-
-.contact__checkbox {
-	height: 34px;
-	width: 34px;
-	outline: 0;
-	border: 0;
-	// opacity: 0;
-}
-
-.contact__
 
 .contact__link {
 	align-self: center;
