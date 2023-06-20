@@ -8,6 +8,7 @@ const bannerMain = {
 	windowWidth: window.innerWidth,
 
 	init: function () {
+		if (!this.modal) return;
 		this.settings();
 		this.resize();
 	},

@@ -240,6 +240,10 @@
 	right: -100%;
 	height: 100vh;
 	overflow: auto;
+	@include animation {
+		transition: $transition-primary;
+		transition-property: box-shadow;
+	}
 	@include large {
 		width: 500px;
 	}
@@ -248,8 +252,8 @@
 	}
 }
 
-.header__menu--active {
-	right: 0;
+.header__menu--shadow {
+	box-shadow: 0 21px 38px rgba($black, 0.2);
 }
 
 .header__menu-top {

@@ -29,6 +29,7 @@ const header = {
 				.add(gsap.to(this.menu, { right: 0 }), 'slide')
 				.add('showItems')
 				.add(gsap.to(this.menuItems, { opacity: 1, stagger: 0.1 }), 'showItems');
+			this.menu.classList.add('header__menu--shadow');
 		});
 
 		this.closeButton.addEventListener('click', () => {
@@ -43,6 +44,9 @@ const header = {
 				.add(gsap.to(this.menu, { right: '-100%' }), 'slideMenu')
 				.add('end')
 				.add(gsap.set(this.menu, { display: 'none' }), 'end');
+			setTimeout(() => {
+				this.menu.classList.remove('header__menu--shadow');
+			}, 1000);
 		});
 	},
 

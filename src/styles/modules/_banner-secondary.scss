@@ -1,0 +1,122 @@
+// ========================================
+// banner-secondary
+// ========================================
+
+.banner-secondary {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+	@include desktop {
+		padding: 216px 0 40px;
+	}
+	@include tablet {
+		padding: 220px 0 40px;
+	}
+	@include phone {
+		padding: 180px 0 1px;
+	}
+}
+
+.banner-secondary__pattern {
+	position: absolute;
+	z-index: -1;
+	opacity: 0.3;
+	max-width: 2188px;
+	@include desktop {
+		bottom: 156px;
+	}
+	@include large {
+		width: 114vw;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	@include tablet {
+		bottom: 248px;
+	}
+	@include phone {
+		width: 200%;
+		left: -20%;
+		bottom: 84px;
+	}
+}
+
+.banner-secondary__heading,
+.banner-secondary__description {
+	text-align: center;
+	margin: 0 auto;
+	@include desktop {
+		max-width: 580px;
+	}
+}
+
+.banner-secondary__heading {
+	@include desktop {
+		margin: 0 auto 8px;
+	}
+	@include small {
+		margin: 0 auto 10px;
+	}
+}
+
+.banner-secondary__description {
+	color: $gold;
+	display: block;
+	@include desktop {
+		margin-bottom: 260px;
+	}
+	@include tablet {
+		margin-bottom: 160px;
+	}
+	@include phone {
+		margin-bottom: 101px;
+	}
+}
+
+.banner-secondary__parallax {
+	position: relative;
+	@include desktop {
+		height: 562px;
+	}
+}
+
+.banner-secondary__hexagon {
+	position: absolute;
+	background-color: $gold;
+	mask-image: url('../assets/images/rounded-hexagon.svg');
+	mask-repeat: no-repeat;
+	mask-position: center;
+	@include desktop {
+		top: -56px;
+		left: -56px;
+		height: 460px;
+		width: 508px;
+	}
+	@include tablet {
+		height: 290px;
+		width: 319px;
+		top: -8px;
+		left: 36px;
+	}
+	@include phone {
+		height: 204px;
+		width: 226px;
+		top: -15px;
+		left: 0px;
+	}
+}
+
+.banner-secondary__image {
+	position: relative;
+	z-index: 2;
+	@include desktop {
+		max-width: 612px;
+	}
+	@include tablet {
+		max-width: 392px;
+		left: 73px;
+	}
+	@include phone {
+		max-width: 280px;
+		left: 18px;
+	}
+}

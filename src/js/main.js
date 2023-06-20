@@ -6,6 +6,7 @@ import cardModule from './chunks/cardModule';
 import modalCards from './chunks/modalCards';
 import hexaInfo from './chunks/hexaInfo';
 import contact from './chunks/contact';
+import bannerSecondary from './chunks/bannerSecondary';
 
 documentLoaded.init();
 header.init();
@@ -15,3 +16,4 @@ cardModule.init();
 modalCards.init();
 hexaInfo.init();
 contact.init();
+bannerSecondary.init();
