@@ -7,7 +7,7 @@
 	overflow: hidden;
 	isolation: isolate;
 	@include desktop {
-		padding: 216px 0 40px;
+		padding: 222px 0 40px;
 	}
 	@include tablet {
 		padding: 220px 0 40px;
@@ -92,7 +92,7 @@
 		width: 508px;
 	}
 	@include tablet {
-		height: 290px;
+		height: 288px;
 		width: 319px;
 		top: -8px;
 		left: 36px;
@@ -101,7 +101,7 @@
 		height: 204px;
 		width: 226px;
 		top: -15px;
-		left: 0px;
+		left: 0;
 	}
 }
 

@@ -82,6 +82,29 @@ input {
 	line-height: 28px;
 }
 
+.h3--large {
+	line-height: 1.1em;
+	@include desktop {
+		font-size: 56px;
+	}
+}
+
+.h3--mod {
+	@include all {
+		line-height: 1.1em;
+		font-weight: $light;
+	}
+	@include desktop {
+		font-size: 56px;
+	}
+	@include tablet {
+		font-size: 56px;
+	}
+	@include phone {
+		font-size: 40px;
+	}
+}
+
 .h3--small {
 	@include tablet {
 		letter-spacing: 0.02em;

@@ -1,0 +1,233 @@
+// ========================================
+// parallax-info
+// ========================================
+
+.parallax-info {
+	overflow: hidden;
+	@include desktop {
+		padding: 60px 0 80px;
+	}
+	@include tablet {
+		padding: 109px 0;
+	}
+	@include phone {
+		padding: 72px 0;
+	}
+}
+
+.parallax-info__paragraph {
+	color: rgba($black, 0.6);
+}
+
+.parallax-info__parallax {
+	position: relative;
+	@include large {
+		height: 785px;
+	}
+	@include phone {
+		height: 486px;
+	}
+}
+
+.parallax-info__image {
+	position: absolute;
+	z-index: 2;
+	@include desktop {
+		top: 180px;
+	}
+	@include large {
+		max-height: 496px;
+		max-width: 574px;
+	}
+	@include small {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) !important;
+	}
+	@include phone {
+		max-width: 210px;
+		max-height: 210px;
+	}
+}
+
+.parallax-info__rounded-decoration {
+	position: absolute;
+	background-color: $gold;
+	mask-image: url('../assets/images/rounded-hexagon.svg');
+	mask-repeat: no-repeat;
+	mask-position: center;
+	@include desktop {
+		height: 460px;
+		width: 508px;
+		top: 132px;
+		left: 175px;
+	}
+	@include tablet {
+		height: 288px;
+		width: 319px;
+	}
+	@include small {
+		display: none;
+	}
+	@include phone {
+		height: 204px;
+		width: 226px;
+	}
+}
+
+.parallax-info__hexagon {
+	filter: drop-shadow(10px 20px 20px rgba($black, 0.15));
+	position: absolute;
+	@include small {
+		display: none;
+	}
+}
+
+.parallax-info__hexagon--one {
+	transform: rotate(30deg);
+	.parallax-info__hexagon-shape {
+		width: 259px;
+		height: 300px;
+		background-color: $white;
+	}
+	@include desktop {
+		bottom: -23%;
+		left: -98%;
+	}
+}
+
+.parallax-info__hexagon--two {
+	transform: rotate(30deg);
+	.parallax-info__hexagon-shape {
+		width: 134px;
+		height: 155px;
+		background-color: $white;
+	}
+	@include desktop {
+		bottom: 31%;
+		left: -42%;
+	}
+}
+
+.parallax-info__hexagon--three {
+	transform: rotate(30deg);
+	.parallax-info__hexagon-shape {
+		width: 134px;
+		height: 155px;
+	}
+	@include desktop {
+		bottom: 65%;
+		right: -64%;
+	}
+	@include large {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
+	}
+}
+
+.parallax-info__hexagon--four {
+	transform: rotate(30deg);
+	.parallax-info__hexagon-shape {
+		width: 134px;
+		height: 155px;
+	}
+	@include desktop {
+		bottom: 75%;
+		right: -58%;
+	}
+	@include large {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
+	}
+}
+
+.parallax-info__hexagon--five {
+	transform: rotate(30deg);
+	.parallax-info__hexagon-shape {
+		width: 87px;
+		height: 100px;
+	}
+	@include desktop {
+		bottom: 42%;
+		right: -43%;
+	}
+	@include large {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
+	}
+}
+
+.parallax-info__hexagon--six {
+	transform: rotate(30deg);
+	.parallax-info__hexagon-shape {
+		width: 173px;
+		height: 200px;
+	}
+	@include desktop {
+		bottom: 76%;
+		right: -100%;
+	}
+	@include large {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
+	}
+}
+
+.parallax-info__hexagon--seven {
+	transform: rotate(30deg);
+	.parallax-info__hexagon-shape {
+		width: 87px;
+		height: 100px;
+	}
+	@include desktop {
+		bottom: 37%;
+		right: -40%;
+	}
+	@include large {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.07);
+		}
+	}
+	@include phone {
+		.parallax-info__hexagon-shape {
+			background-color: rgba($black, 0.015);
+		}
+	}
+}
+
+.parallax-info__hexagon-shape {
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.parallax-info__sub-heading {
+	@include large {
+		margin-bottom: 28px;
+	}
+	@include phone {
+		margin-bottom: 25px;
+	}
+}

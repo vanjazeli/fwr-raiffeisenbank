@@ -191,6 +191,10 @@
 	}
 }
 
+.header__floating-line--gold::before {
+	background-color: $gold;
+}
+
 .header__floating-line--opacity {
 	opacity: 0;
 }

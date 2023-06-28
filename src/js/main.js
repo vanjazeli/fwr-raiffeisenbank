@@ -7,6 +7,7 @@ import modalCards from './chunks/modalCards';
 import hexaInfo from './chunks/hexaInfo';
 import contact from './chunks/contact';
 import bannerSecondary from './chunks/bannerSecondary';
+import parallaxInfo from './chunks/parallaxInfo';
 
 documentLoaded.init();
 header.init();
@@ -17,3 +18,4 @@ modalCards.init();
 hexaInfo.init();
 contact.init();
 bannerSecondary.init();
+parallaxInfo.init();

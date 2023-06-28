@@ -39,3 +39,12 @@ html {
 .wrap--ultra-narrow {
 	max-width: 744px;
 }
+
+.wrap--thin {
+	@include large {
+		max-width: 660px;
+	}
+	@include phone {
+		max-width: 334px;
+	}
+}
