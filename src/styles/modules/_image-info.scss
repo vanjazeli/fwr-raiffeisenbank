@@ -1,0 +1,52 @@
+// ========================================
+// image-info
+// ========================================
+
+.image-info {
+	@include desktop {
+		padding: 60px 0 146px;
+	}
+	@include tablet {
+		padding: 109px 0 148px;
+	}
+	@include phone {
+		padding: 72px 0 136px;
+	}
+}
+
+.image-info__paragraph {
+	color: $black;
+}
+
+.image-info__paragraph--main {
+	@include tablet {
+		font-size: 24px;
+		line-height: 32px;
+	}
+	@include phone {
+		font-size: 20px;
+		line-height: 27px;
+	}
+}
+
+.image-info__paragraph--light {
+	color: rgba($black, 0.6);
+}
+
+.image-info__image-wrap {
+	display: flex;
+	justify-content: center;
+}
+
+.image-info__image {
+	width: 100%;
+	@include desktop {
+		max-width: 1250px;
+	}
+	@include tablet {
+		max-width: 81%;
+	}
+	@include phone {
+		max-width: 78%;
+	}
+}

@@ -37,6 +37,26 @@
 	}
 }
 
+.contact--mod {
+	.contact__input-wrap {
+		margin-bottom: 40px;
+	}
+	@include desktop {
+		.contact__paragraph {
+			margin-bottom: 42px;
+		}
+	}
+	@include large {
+		padding: 149px 20px 127px;
+		.contact__form {
+			padding-left: 84px;
+		}
+		.contact__link {
+			align-self: flex-start;
+		}
+	}
+}
+
 .contact__decoration-holder {
 	position: absolute;
 	left: 50%;
@@ -92,9 +112,7 @@
 }
 
 .contact__heading {
-	@include large {
-		margin-bottom: 43px;
-	}
+	margin-bottom: 43px;
 }
 
 .contact__paragraph {
