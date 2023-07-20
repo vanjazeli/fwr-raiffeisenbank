@@ -30,12 +30,18 @@ const header = {
 				this.closeMenu();
 			}
 		});
+
+		document.addEventListener('click', (event) => {
+			if (this.isMenuOpen && !event.target.closest('.js-header-menu')) {
+				this.closeMenu();
+			}
+		});
 	},
 
 	openMenu: function () {
-		this.isMenuOpen = true;
 		helpers.disableScroll();
 		setTimeout(() => {
+			this.isMenuOpen = true;
 			this.menuCtas[0].focus();
 			this.closeButton.classList.add('header__button--active');
 		}, 500);
