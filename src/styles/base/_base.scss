@@ -3,6 +3,7 @@
 // ========================================
 
 a:focus,
-button:focus {
-	outline: 2px dashed rgba($gold, 0.4);
+button:focus,
+input:focus {
+	outline: 4px dashed $gold;
 }
